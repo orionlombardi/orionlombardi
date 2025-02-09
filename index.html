@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Personal Trainer Landing Page</title>
+  <style>
+    /* Global resets and basic styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header and Navigation */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #f2f2f2;
+    }
+
+    .logo {
+      height: 60px;
+      width: auto;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      padding: 0.5rem 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #ddd;
+      border-radius: 5px;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 1rem;
+      background-color: #fff;
+    }
+
+    .hero img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .hero h1 {
+      margin-top: 1.5rem;
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      color: #555;
+    }
+
+    /* Sections */
+    section {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      color: #333;
+      text-transform: uppercase;
+      border-bottom: 2px solid #ddd;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
+
+    section p, section li {
+      margin-bottom: 0.75rem;
+      line-height: 1.5;
+    }
+
+    /* FAQ styling */
+    .faq-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .faq-item h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: #444;
+    }
+
+    .faq-item p {
+      font-size: 1rem;
+      margin-left: 1rem;
+      color: #555;
+    }
+
+    /* Contacts styling */
+    .contact-info {
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .contact-info a {
+      color: #007aff;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    /* Classes styling */
+    .classes-list {
+      list-style: inside square;
+      margin-left: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #f2f2f2;
+      margin-top: 2rem;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+      }
+      nav ul {
+        flex-direction: column;
+        margin-top: 1rem;
+      }
+      .hero {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <!-- You can replace "My Personal Training" with your name or a slogan -->
+    <div class="branding">
+      <h2>My Personal Training</h2>
+    </div>
+    <img src="logo.jpg" alt="Personal Trainer Logo" class="logo" />
+    <nav>
+      <ul>
+        <li><a href="#contacts">Contacts</a></li>
+        <li><a href="#faq">F.A.Q.</a></li>
+        <li><a href="#what-i-do">What I do?</a></li>
+        <li><a href="#classes">Classes</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <img src="central.jpg" alt="Central Fitness Image" />
+    <h1>Transform Your Body, Transform Your Life</h1>
+    <p>Personalized fitness programs for all levels.</p>
+  </section>
+
+  <!-- CONTACTS SECTION -->
+  <section id="contacts">
+    <h2>Contacts</h2>
+    <p>Have questions or ready to start training?</p>
+    <div class="contact-info">
+      WhatsApp: <a href="https://wa.me/1234567890" target="_blank">+1 234 567 890</a>
+      <br/>
+      <!-- Add any other contact methods if desired -->
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section id="faq">
+    <h2>F.A.Q.</h2>
+
+    <div class="faq-item">
+      <h3>1. How many times a week should I train?</h3>
+      <p>It depends on your goals, but typically 2-4 sessions per week yield excellent results.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>2. Do I need any prior experience?</h3>
+      <p>No. I tailor all programs to any fitness level, from beginners to seasoned athletes.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>3. Where do the training sessions take place?</h3>
+      <p>I offer in-gym sessions, home visits, and online consultations/workouts.</p>
+    </div>
+  </section>
+
+  <!-- WHAT I DO SECTION -->
+  <section id="what-i-do">
+    <h2>What I do?</h2>
+    <p>
+      I specialize in personalized fitness programs, weight management, muscle building, and overall health improvement. I create customized meal plans and workout routines tailored to each client’s unique needs.
+    </p>
+    <ul>
+      <li>Certified Personal Trainer</li>
+      <li>Strength and Conditioning Specialist</li>
+      <li>Nutritional Guidance</li>
+      <li>HIIT, Functional Training, and Mobility</li>
+    </ul>
+  </section>
+
+  <!-- CLASSES SECTION -->
+  <section id="classes">
+    <h2>Classes</h2>
+    <p>Join my group sessions or individual classes:</p>
+    <ul class="classes-list">
+      <li>Group Fitness Sessions (Strength & Cardio)</li>
+      <li>Yoga and Flexibility Classes</li>
+      <li>Bootcamp and HIIT Training</li>
+      <li>Personalized 1-on-1 Training</li>
+    </ul>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Your Name — Personal Trainer. All rights reserved.</p>
+  </footer>
+</body>
+</html>
