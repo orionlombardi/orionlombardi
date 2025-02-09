@@ -49,33 +49,50 @@
       border-radius: 5px;
     }
 
-    /* Hero Section */
+    /* Hero Section with Background */
     .hero {
+      /* Adjust min-height as needed */
+      min-height: 60vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
       padding: 3rem 1rem;
-      background-color: #fff;
+
+      /* Use central.jpg as the background */
+      background: url("central.jpg") no-repeat center center;
+      background-size: cover;
+      position: relative;
+      color: #fff; /* Make text white for contrast */
     }
 
-    .hero img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 5px;
+    /* Optional: dark overlay for better text contrast */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+    /* Ensure hero text appears above overlay */
+    .hero h1,
+    .hero p {
+      position: relative;
+      z-index: 2;
     }
 
     .hero h1 {
       margin-top: 1.5rem;
       font-size: 2rem;
-      color: #333;
     }
 
     .hero p {
       font-size: 1.2rem;
       margin-top: 0.5rem;
-      color: #555;
     }
 
     /* Sections */
@@ -95,7 +112,8 @@
       padding-bottom: 0.5rem;
     }
 
-    section p, section li {
+    section p,
+    section li {
       margin-bottom: 0.75rem;
       line-height: 1.5;
     }
@@ -156,10 +174,12 @@
       header {
         flex-direction: column;
       }
+
       nav ul {
         flex-direction: column;
         margin-top: 1rem;
       }
+
       .hero {
         padding: 2rem 1rem;
       }
@@ -169,7 +189,6 @@
 <body>
   <!-- HEADER -->
   <header>
-    <!-- You can replace "My Personal Training" with your name or a slogan -->
     <div class="branding">
       <h2>Orion Lombardi PT</h2>
     </div>
@@ -184,9 +203,9 @@
     </nav>
   </header>
 
-  <!-- HERO SECTION -->
+  <!-- HERO SECTION WITH BACKGROUND -->
   <section class="hero">
-    <img src="orionale.jpg" alt="Central Fitness Image" />
+    <!-- Removed the <img> tag; now the background is set via CSS -->
     <h1>Transform Your Body, Transform Your Life</h1>
     <p>Personalized fitness programs for all levels.</p>
   </section>
@@ -198,36 +217,39 @@
     <div class="contact-info">
       WhatsApp: <a href="https://wa.me/1234567890" target="_blank">+1 234 567 890</a>
       <br/>
-<!-- Calendly badge widget begin
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/orionlombardi-pro/30min', text: 'Schedule time with me', color: '#8498b5', textColor: '#dc2828' }); }</script>
- Calendly badge widget end -->
+      <!-- Calendly badge widget begin -->
+      <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+      <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+      <script type="text/javascript">
+        window.onload = function() {
+          Calendly.initBadgeWidget({
+            url: 'https://calendly.com/orionlombardi-pro/30min',
+            text: 'Schedule time with me',
+            color: '#8498b5',
+            textColor: '#dc2828'
+          });
+        }
+      </script>
+      <!-- Calendly badge widget end -->
       
-<!-- Calendly inline widget begin -->
-<div class="calendly-inline-widget" data-url="https://calendly.com/orionlombardi-pro/30min?hide_gdpr_banner=1&primary_color=ff1600" style="min-width:320px;height:700px;"></div>
-<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-<!-- Calendly inline widget end -->
-
-
-      
+      <!-- Calendly inline widget begin -->
+      <div class="calendly-inline-widget" data-url="https://calendly.com/orionlombardi-pro/30min?hide_gdpr_banner=1&primary_color=ff1600" style="min-width:320px;height:700px;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      <!-- Calendly inline widget end -->
     </div>
   </section>
 
   <!-- FAQ SECTION -->
   <section id="faq">
     <h2>F.A.Q.</h2>
-
     <div class="faq-item">
       <h3>1. How many times a week should I train?</h3>
       <p>It depends on your goals, but typically 2-4 sessions per week yield excellent results.</p>
     </div>
-
     <div class="faq-item">
       <h3>2. Do I need any prior experience?</h3>
       <p>No. I tailor all programs to any fitness level, from beginners to seasoned athletes.</p>
     </div>
-
     <div class="faq-item">
       <h3>3. Where do the training sessions take place?</h3>
       <p>I offer in-gym sessions, home visits, and online consultations/workouts.</p>
@@ -238,7 +260,8 @@
   <section id="what-i-do">
     <h2>What I do?</h2>
     <p>
-      I specialize in personalized fitness programs, weight management, muscle building, and overall health improvement. I create customized meal plans and workout routines tailored to each client’s unique needs.
+      I specialize in personalized fitness programs, weight management, muscle building, and overall health 
+      improvement. I create customized meal plans and workout routines tailored to each client’s unique needs.
     </p>
     <ul>
       <li>Certified Personal Trainer</li>
